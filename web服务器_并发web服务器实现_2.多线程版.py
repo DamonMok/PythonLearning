@@ -1,6 +1,6 @@
 import socket
 import re
-import multiprocessing
+import threading
 
 
 def service_client(new_client_socket):
@@ -46,7 +46,7 @@ def service_client(new_client_socket):
         new_client_socket.send(content)
 
     # 3.关闭连接
-    new_client_socket.close()  # 这是关闭子进程的new_client_socket的，因为子进程会复制父进程
+    new_client_socket.close()
 
 
 def main():
@@ -64,11 +64,10 @@ def main():
         # 4.等待接收客户端连接
         new_client_socket, new_client_address = tcp_server_socket.accept()
 
-        # 多进程服务
-        p = multiprocessing.Process(target=service_client, args=(new_client_socket,))
-        p.start()
+        # 多线程服务
+        t = threading.Thread(target=service_client, args=(new_client_socket,))
+        t.start()
 
-        new_client_socket.close()  # 这是关闭父进程new_client_socket的
 
     # 6.关闭套接字
     tcp.server_socket.close()
