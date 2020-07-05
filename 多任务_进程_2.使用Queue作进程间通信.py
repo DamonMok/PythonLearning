@@ -21,7 +21,7 @@ def analysis_data(q):
     waiting_analysis_data = list()
 
     while True:
-        # 从队列中获取数据
+        # 从队列中获取数据，数据还没取到时，会阻塞
         data = q.get()
         waiting_analysis_data.append(data)
 
