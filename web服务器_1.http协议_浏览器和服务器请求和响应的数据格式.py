@@ -24,6 +24,7 @@ COOKIE_SESSION=2254_3_8_2_12_9_0_0_8_3_1_0_20732_5639_3395_3391_1593940802_15939
 
 
 服务器---》浏览器
+# 这是响应头header
 HTTP/1.1 200 OK  # 这句必须要有
 Bdpagetype: 2
 Bdqid: 0xa6464bb50010e1c6
@@ -41,6 +42,9 @@ Strict-Transport-Security: max-age=172800
 Traceid: 1593942402020747981811981347099428053446
 X-Ua-Compatible: IE=Edge,chrome=1
 Transfer-Encoding: chunked
+
+# 空一格之后，下面就是响应的body
+<!DOCTYPE html><!--STATUS OK-->
 
 
 """
