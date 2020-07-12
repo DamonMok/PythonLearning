@@ -48,6 +48,11 @@
 
     -- 查询-查询指定列,并且给列起名
     select name as 姓名,gender as 性别 from student;
+    select student.name,student.age from student
+    select s.name,s.age from student as s
+
+    -- 查询-消除重复行
+    select distinct from students;
 
 
 
