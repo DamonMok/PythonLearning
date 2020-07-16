@@ -202,6 +202,65 @@ def del_focus(ret):
     return "取消关注成功！"
 
 
+@route(r"/update/(\d+)\.html")
+def show_update_page(ret):
+    """显示更新页面"""
+
+    # 创建连接数据库
+    conn = connect(host="localhost", port=3306, user="root", password="damonmok", database="stock_db")
+
+    # 获取游标
+    cursor = conn.cursor()
+
+    # 1.获取股票代码
+    stock_id = ret.group(1)
+
+    # 2.查找备注信息
+    params = [stock_id]
+    cursor.execute("""select note_info from focus where info_id=(select id from info where code=%s)""", params)
+
+    note = cursor.fetchone()
+    note_info = ""
+    if note:
+        note_info = note[0]
+
+    # 1.获取股票代码
+    stock_id = ret.group(1)
+
+    with open("./templates/update.html", "r") as f:
+        content = f.read()
+
+        content = re.sub(r"\{%code%\}", stock_id, content)
+        content = re.sub(r"\{%note_info%\}", note_info, content)
+
+        return content
+
+
+@route(r"/update/(\d+)/(.*)\.html")
+def save_update_info(ret):
+    """保存更新备注信息"""
+
+    # 创建连接数据库
+    conn = connect(host="localhost", port=3306, user="root", password="damonmok", database="stock_db")
+
+    # 获取游标
+    cursor = conn.cursor()
+
+    # 1.获取修改的内容
+    stock_code = ret.group(1)
+    note_info = ret.group(2)
+
+    params = [note_info, stock_code]
+    cursor.execute("""update focus set note_info=%s where info_id=(select id from info where code=%s)""", params)
+    conn.commit()
+
+    # 关闭游标和连接
+    cursor.close()
+    conn.close()
+
+    return "修改备注成功！"
+
+
 def application(environ, start_response):
 
     # 1.调用web服务器传过来的函数，给服务器返回header信息
