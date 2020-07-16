@@ -120,11 +120,44 @@ def center(ret):
 
 @route(r"/add/(\d+)\.html")
 def add_focus(ret):
+    """关注股票"""
+
+    # 创建连接数据库
+    conn = connect(host="localhost", port=3306, user="root", password="damonmok", database="stock_db")
+
+    # 获取游标
+    cursor = conn.cursor()
 
     # 1.获取股票代码
     stock_id = ret.group(1)
 
-    return stock_id
+    # 2.判断是否有这个股票代码
+    params = [stock_id]
+    cursor.execute("""select * from info where code=%s""", params)
+
+    if not cursor.fetchone():
+        # 关闭游标和连接
+        cursor.close()
+        conn.close()
+        return "没有该股票！"
+
+    # 3.判断是否已经关注
+    cursor.execute("""select * from info inner join focus on info.id=focus.info_id where  info.code=%s""", params)
+    if cursor.fetchone():
+        # 关闭游标和连接
+        cursor.close()
+        conn.close()
+        return "已经关注过"
+
+    # 4.添加关注
+    cursor.execute("""insert into focus (info_id) select id from info where code=%s""", params)
+    conn.commit()
+
+    # 关闭游标和连接
+    cursor.close()
+    conn.close()
+
+    return "关注成功！"
 
 
 def application(environ, start_response):
