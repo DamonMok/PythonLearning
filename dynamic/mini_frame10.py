@@ -101,17 +101,17 @@ def center(ret):
                     <td>%s</td>
                     <td>%s</td>
                     <td>
-                        <a type="button" class="btn btn-default btn-xs" href="/update/300268.html"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 修改 </a>
+                        <a type="button" class="btn btn-default btn-xs" href="/update/%s.html"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 修改 </a>
                     </td>
                     <td>
-                        <input type="button" value="删除" id="toDel" name="toDel" systemidvaule="300268">
+                        <input type="button" value="删除" id="toDel" name="toDel" systemIdValue=%s>
                     </td>
                 </tr>
             """
 
         for line_info in stock_info:
             html += tr_template % (line_info[0], line_info[1], line_info[2], line_info[3],
-                                   line_info[4], line_info[5], line_info[6])
+                                   line_info[4], line_info[5], line_info[6], line_info[0], line_info[0])
 
         content = re.sub("\{%content%\}", html, content)
 
@@ -158,6 +158,48 @@ def add_focus(ret):
     conn.close()
 
     return "关注成功！"
+
+
+@route(r"/del/(\d+)\.html")
+def del_focus(ret):
+    """取消关注"""
+
+    # 创建连接数据库
+    conn = connect(host="localhost", port=3306, user="root", password="damonmok", database="stock_db")
+
+    # 获取游标
+    cursor = conn.cursor()
+
+    # 1.获取股票代码
+    stock_id = ret.group(1)
+
+    # 2.判断是否有这个股票代码
+    params = [stock_id]
+    cursor.execute("""select * from info where code=%s""", params)
+
+    if not cursor.fetchone():
+        # 关闭游标和连接
+        cursor.close()
+        conn.close()
+        return "没有该股票！"
+
+    # 3.判断是否已经关注
+    cursor.execute("""select * from info inner join focus on info.id=focus.info_id where  info.code=%s""", params)
+    if not cursor.fetchone():
+        # 关闭游标和连接
+        cursor.close()
+        conn.close()
+        return "还没有关注该股票！"
+
+    # 4.取消关注
+    cursor.execute("""delete from focus where focus.info_id=(select id from info where code=%s)""", params)
+    conn.commit()
+
+    # 关闭游标和连接
+    cursor.close()
+    conn.close()
+
+    return "取消关注成功！"
 
 
 def application(environ, start_response):

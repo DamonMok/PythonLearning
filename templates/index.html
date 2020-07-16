@@ -11,16 +11,16 @@
     <script>
         $(document).ready(function(){
 
-                $("input[name='toAdd']").each(function(){
-                    var currentAdd = $(this);
-                    currentAdd.click(function(){
+                $("input[name='toAdd']").each(function(){  
+                    var currentAdd = $(this);  
+                    currentAdd.click(function(){  
                         code = $(this).attr("systemIdValue");
-                        // alert("/add/" + code + ".html");
+                        // alert("/add/" + code + ".html"); 
                         $.get("/add/" + code + ".html", function(data, status){
                             alert("数据: " + data + "\n状态: " + status);
                         });
-                    });
-                });
+                    });  
+                });  
         });
     </script>
 </head>
@@ -65,4 +65,4 @@
     </div>
 </div>
 </body>
-</html>
+</html>            
