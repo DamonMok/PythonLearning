@@ -1,0 +1,5 @@
+2020-07-17 20:50:17,390 - log日志功能-3.将日志同时输出到控制台和文件.py[line:35] - DEBUG: logging-debug message
+2020-07-17 20:50:17,390 - log日志功能-3.将日志同时输出到控制台和文件.py[line:36] - INFO: logging-info message
+2020-07-17 20:50:17,390 - log日志功能-3.将日志同时输出到控制台和文件.py[line:37] - WARNING: logging-warning message
+2020-07-17 20:50:17,390 - log日志功能-3.将日志同时输出到控制台和文件.py[line:38] - ERROR: logging-info message
+2020-07-17 20:50:17,390 - log日志功能-3.将日志同时输出到控制台和文件.py[line:39] - CRITICAL: logging-critical message
