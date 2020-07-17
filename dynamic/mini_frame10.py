@@ -1,5 +1,6 @@
 from pymysql import connect
 import re
+import urllib.parse
 
 
 URL_FUNC_DICT = dict()
@@ -246,10 +247,12 @@ def save_update_info(ret):
     # 获取游标
     cursor = conn.cursor()
 
-    # 1.获取修改的内容
+    # 1.获取修改的备注信息
     stock_code = ret.group(1)
-    note_info = ret.group(2)
+    note_info = ret.group(2)  # 浏览器会将URL编码，发送给服务器，再发送给框架。如果URL有中文会进行编码，需要显示中文的话，这里需要解码
+    note_info = urllib.parse.unquote(note_info)
 
+    # 2.修改备注
     params = [note_info, stock_code]
     cursor.execute("""update focus set note_info=%s where info_id=(select id from info where code=%s)""", params)
     conn.commit()
