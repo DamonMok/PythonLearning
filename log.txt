@@ -1,0 +1,10 @@
+2020-07-17 20:33:43,665 - log日志功能-2.将日志输出到文件.py[line:20] - DEBUG: logging-debug message
+2020-07-17 20:33:43,665 - log日志功能-2.将日志输出到文件.py[line:21] - INFO: logging-info message
+2020-07-17 20:33:43,665 - log日志功能-2.将日志输出到文件.py[line:22] - WARNING: logging-warning message
+2020-07-17 20:33:43,665 - log日志功能-2.将日志输出到文件.py[line:23] - ERROR: logging-info message
+2020-07-17 20:33:43,665 - log日志功能-2.将日志输出到文件.py[line:24] - CRITICAL: logging-critical message
+2020-07-17 20:34:01,856 - log日志功能-2.将日志输出到文件.py[line:20] - DEBUG: logging-debug message
+2020-07-17 20:34:01,856 - log日志功能-2.将日志输出到文件.py[line:21] - INFO: logging-info message
+2020-07-17 20:34:01,856 - log日志功能-2.将日志输出到文件.py[line:22] - WARNING: logging-warning message
+2020-07-17 20:34:01,856 - log日志功能-2.将日志输出到文件.py[line:23] - ERROR: logging-info message
+2020-07-17 20:34:01,856 - log日志功能-2.将日志输出到文件.py[line:24] - CRITICAL: logging-critical message
