@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单注册</title>
+</head>
+<body>
+	
+	<h1>表单注册</h1>
+
+	<!-- 
+		name:提交表单时url拼接的key
+		value:提交表单时url拼接的value;type="text"时，会自动赋值
+		for:配合id使用，增大点击区域
+		id:相当于控件的唯一标志
+	 -->
+
+	<form action="">
+		<div>
+			<label for="username">用户名:</label>
+			<input type="text" name="username" id="username">
+		</div>
+		<br />
+		
+		<div>
+			<label for="password">密&nbsp;&nbsp;&nbsp;码:</label>
+			<input type="password" name="password" id="password">
+		</div>
+		<br />
+
+		<div>
+			<label for="">性&nbsp;&nbsp;&nbsp;别:</label>
+			<input type="radio" name="gender" value="1" id="male"><label for="male">男</label>
+			<input type="radio" name="gender" value="0" id="female"><label for="female">女</label>
+		</div>
+		<br />
+
+		<div>
+			<label for="">爱&nbsp;&nbsp;&nbsp;好:</label>
+			<input type="checkbox" name="like" value="baskeball" id="baskeball"><label for="baskeball">篮球</label>
+			<input type="checkbox" name="like" value="swimming" id="swimming"><label for="swimming">游泳</label>
+			<input type="checkbox" name="like" value="running" id="runnning"><label for="runnning">跑步</label>
+			<input type="checkbox" name="like" value="singing" id="singing"><label for="singing">唱歌</label>
+		</div>
+		<br />
+
+		<div>
+			<label for="">照&nbsp;&nbsp;&nbsp;片:</label>
+			<input type="file">
+		</div>
+		<br />
+		
+		<div>
+			<label for="">个人介绍:</label>
+		<textarea name="introduce" id="" cols="30" rows="10" ></textarea>
+		<br />
+		<br />
+		</div>
+		
+
+		<div>
+			<label for="">籍&nbsp;&nbsp;&nbsp;贯:</label>
+		<select name="from" id="">
+			<option value="0">广东</option>
+			<option value="1">浙江</option>
+			<option value="2">福建</option>
+			<option value="3">山西</option>
+		</select>
+		</div>
+		<br />
+
+		<div>
+			<!-- 
+				<input type="image" src="./cat.jpg">
+				会把点击图片的x/y值都传过去。
+				用图片提交的话，会导致提交2次，不建议使用
+			 -->
+
+			 <!-- submit/reset默认有值，可以通过value修改 -->
+			<input type="submit" value="提交">
+			<input type="reset" value="重设">
+		</div>
+
+		
+		<div>
+			<!-- hidden是隐藏表单域，用来提交不需要再页面显示的数据 -->
+			<input type="hidden" name="hd1" value="hd msg">
+		</div>
+
+	</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
