@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于定位</title>
+
+	<style>
+			
+		.box{
+			width: 300px;
+			height: 300px;
+			border: 1px solid gold;
+		}
+
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+
+			position: relative;
+			top: 50px;
+			left: 50px;
+
+		}
+
+		.box2{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+
+			position: absolute;
+			right: 50px;
+			top: 50px;
+		}
+
+		.box4{
+			width: 250px;
+			height: 200px;
+			background-color: blue;
+
+			position: fixed;
+			right: 50px;
+			bottom: 50px;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<!-- 
+		文档流：指的是盒子安装html标签编写的顺序依次从上到下，从左到右排列。块元素占一行，行内元素在一行之内从左到右排列，先写的先排列。
+
+		可以使用position属性来设置元素的定位类型：
+		1.relative ：生成相对定位的元素，元素不脱离文档流，元素本身相对自身原位置进行偏移；
+
+		2.absolute ：生成绝对定位的元素， 元素脱离文档流。元素相对于上一个设置了定位的父元素进行定位，如果没有，则根据body定位
+
+		3.fixed : 生成固定定位元素，元素脱离文档流，根据浏览器窗口进行定位。(可用于弹窗、警告、广告)
+
+		4.static : 是默认值，元素在文档流中，没有定位。相当于取消定位属性或者不设置定位属性
+
+		5.inherit : 从父元素继承position属性的值
+
+
+		定位元素的偏移：
+		left/right/top/bottom
+
+
+		定位的层级：元素中z-index属性的num越大，排在越顶层
+		z-index:num
+
+
+		定位元素特性：
+		绝对定位和固定定位的块元素和行内元素会转化为行内块元素
+	 -->
+
+
+	<!-- relative -->
+	 <div class="box">
+	 	<div class="box1">relative</div>
+	 	<div class="box2">2</div>
+	 </div>
+
+	
+	<br />
+	
+
+	<!-- absolute -->
+	<div class="box3">absolute</div>
+
+	
+	<br />
+
+	
+	<!-- fixed -->
+	<div class="box4">fixed</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
