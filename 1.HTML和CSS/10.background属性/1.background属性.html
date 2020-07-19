@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background属性</title>
+	<style>
+		
+		.pic{
+			width: 400px;
+			height: 200px;
+			border: 5px solid #000;
+			margin: 50px auto 0;
+
+			/*0.背景图片*/
+			/*background-image: url(images/cat.jpeg);*/
+
+			/*1.1只横向平铺*/
+			/*background-repeat: repeat-x;*/
+
+			/*1.2只纵向平铺*/
+			/*background-repeat: repeat-y;*/
+
+			/*1.3只平铺一次*/
+			/*background-repeat: no-repeat;*/
+
+			/*1.4平铺所有, 缺省值*/
+			/*background-repeat: repeat;*/
+
+			/*2.位置：x1代表左右, x2上下*/
+			/*水平方向：left/center/right*/
+			/*垂直方向：top/center/bottom*/
+			/*background-position: center center;*/
+			/*background-position: 100px, 50px;*/
+
+			/*3.图片地址、位置、重复全部一起写，不用考虑顺序*/
+			background: url(images/cat.jpeg) 50px 60px no-repeat;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 
+		1.background-color: 背景颜色
+
+		2.background-image: 背景图片地址
+		background-image: url(images/cat.jpeg);
+
+		3.background-repeat: 背景图如何重复平铺
+		background-repeat: repeat-x | repeat-y | no-repeat | repeat
+
+		4.background-position: 背景图位置
+		
+
+		5.background-attachment: 设置背景图片是固定还是随着页面滚动而滚动
+	 -->
+
+	<div class="pic"></div>
+
+</body>
+</html>
