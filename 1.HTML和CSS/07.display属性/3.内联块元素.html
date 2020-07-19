@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联块元素</title>
+
+	<style>
+		
+		.box{
+
+			width: 694px;
+			height: 50px;
+
+			font-size: 0px;
+			text-align: center;
+		}
+
+		.box a{
+
+			display: inline-block;
+			width: 98px;
+			height: 48px;
+			border: 1px solid gold;
+			font: normal 16px/48px 'microsoft Yahei';
+			color: pink;
+			margin-left: -1px;
+			text-decoration: none;
+		}
+
+		.box a:hover{
+
+			color: #fff;
+			background-color: gold;
+		}
+
+	</style>
+
+</head>
+<body>
+	<!-- 
+		1.支持全部样式
+		2.如果没指定宽高，宽高就由内容决定
+		3.盒子并在一行
+		4.代码换行，盒子间会产生间距
+		5.如果子元素是内联块元素，父元素可以通过text-align设置水平对齐方式
+
+
+		display属性：
+		none:元素隐藏且不占位置
+		block:元素以块元素显示
+		inline:元素以内联元素显示
+		inline-block:元素以内联块元素显示
+	 -->
+
+	<div class="box">
+		<a href="#">首页</a>
+		<a href="#">公司简介</a>
+		<a href="#">解决方案</a>
+		<a href="#">公司新闻</a>
+		<a href="#">行业动态</a>
+		<a href="#">招贤纳才</a>
+		<a href="#">联系我们</a>
+	</div>
+
+</body>
+</html>
