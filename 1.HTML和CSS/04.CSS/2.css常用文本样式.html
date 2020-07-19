@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css常用文本样式</title>
+
+	<style>
+		
+		h1{
+			/*文字颜色*/
+			color: blue;  
+
+			/*文字大小*/
+			font-size: 16px;
+
+			/*文字字体*/
+			font-family: 'microsoft Yahei';
+
+			/*是否倾斜，normal为不倾斜*/
+			font-style: italic;
+
+			/*是否加粗，normal为不加粗*/
+			font-weight: bold;
+
+			/*文字行高*/
+			line-height: 30px;
+		}
+
+		h2{
+			/*同时设置时，要按照顺序，不然有兼容问题：是否加粗 文字大小/文字行高 字体*/
+			font:bold 16px/30px 'microsoft Yahei';
+		}
+
+		a{
+			/*下划线，underline代表有下划线*/
+			text-decoration: none;
+		}
+
+		p{
+			/*首行缩进*/
+			text-indent: 32px;
+		}
+
+		div{
+			/*文字居中*/
+			text-align: center;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>CSS常用文本样式</h1>
+
+	
+	<h2>同时设置文字几个属性</h2>
+
+	<a href="#">去掉下划线的连接</a>
+
+	<p>首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进</p>
+
+	<div>文字居中文字居中文字居中文中文字居中文字居中文字居中文字居中文字居中文字居中文字居中文字居中文字居中文字居中</div>
+	
+</body>
+</html>
