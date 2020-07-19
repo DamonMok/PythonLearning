@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin表格边框重叠问题</title>
+
+	<style>
+		
+		.box{
+			width: 202px;
+			height: 156px;
+			margin:50px auto;
+		}
+
+		.box div{
+			widows: 200px;
+			height: 30px;
+			background-color: gold;
+			border: 1px solid green;
+			margin-top: -1px;  /*往上平移解决*/
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>
