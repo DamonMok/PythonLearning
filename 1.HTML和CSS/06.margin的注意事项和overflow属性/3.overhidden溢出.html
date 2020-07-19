@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>overhidden溢出</title>
+
+	<style>
+		body{
+			overflow: scroll;
+		}
+		
+		.box{
+			width: 300px;
+			height: 200px;  /*父元素设置了高度，超出的部分就可以通过指定overhidden的属性值来控制*/
+			border: 1px solid black;
+			background-color: gold;
+			margin: 50px auto 0;
+
+			/*
+				visible:默认的，超出部分可以显示;
+				hidden:超出部分内容被裁剪；还可以用来解决margin-top塌陷，还可以用来清除浮动;
+				scroll:超出部分会隐藏，但是浏览器会显示滚动条以便查看;
+				auto:如果有超出内容，就会显示滚动条；否则不显示滚动条;
+				inherit:从父元素继承overhidden属性;
+			*/
+			overflow: scroll;  
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢出元素溢
+	</div>
+</body>
+</html>
