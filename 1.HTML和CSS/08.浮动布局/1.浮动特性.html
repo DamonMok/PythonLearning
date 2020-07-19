@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动特性</title>
+	
+	<style>
+		
+		.con{
+			width: 400px;
+			height: 60px;
+			border: 1px solid gold;
+		}
+
+		.con div{
+			width: 100px;
+			height: 50px;
+			/*float: left;*/
+		}
+
+		.box1{
+			background-color: red;
+			float: left;
+		}
+
+		.box2{
+			background-color: blue;
+			float: right;
+		}
+
+		.con1{
+			width: 380px;
+			height: 380px;
+			border: 1px solid gold;
+		}
+
+		.con1 div{
+			float: left;
+		}
+
+		.box3{
+			width: 80px;
+			height: 80px;
+			margin:20px;
+			background-color: gold;
+		}
+
+
+		.con2{
+			width: 400px;
+			height: 200px;
+			border: 1px solid gold;
+		}
+
+		.box4{
+			width: 60px;
+			height: 60px;
+			background-color: pink;
+			float: left;
+			margin: 10px;
+		}
+
+		.text{
+			height: 130px;
+			background-color: gold;
+			color: #fff;
+		}
+
+		
+
+	</style>
+
+</head>
+<body>
+	<!-- 
+		1.浮动元素有左浮动和右浮动两种
+		2.浮动的元素向左或者向右浮动，碰到父元素的边界、其他元素才停下来
+		3.相邻浮动的块元素可以并在一行，超出父元素宽度就换行
+		4.浮动让块元素和内联元素自动转换为内联块元素(此时不会有行内块间间距问题)
+		5.浮动元素后面，不浮动的元素会占据浮动元素的位置；而且浮动的元素里面的文字会避开浮动的元素，形成文字环绕效果
+		6.
+		7.足够多到能换行的浮动元素，没有margin-top的垂直外边距合并问题
+	 -->
+
+	<!-- 左右浮动 -->
+	 <div class="con">
+	 	<div class="box1">box1</div>
+		<div class="box2">box2</div>
+	 </div>
+
+	<br />
+	<br />
+
+
+
+	<!-- 
+		向左浮动，碰到父元素边界会换行
+		足够多能换行的浮动元素没有垂直外边距合并的问题-0男男女女女木
+	-->
+	<div class="con1">
+		<div class="box3">1</div>
+		<div class="box3">2</div>
+		<div class="box3">3</div>
+		<div class="box3">4</div>
+		<div class="box3">5</div>
+		<div class="box3">6</div>
+		<div class="box3">7</div>
+		<div class="box3">8</div>
+		<div class="box3">9</div>
+	</div>
+
+	<br />
+	<br />
+
+
+	<!-- 文字环绕 -->
+	<div class="con2">
+		<div class="box4"></div>
+		<div class="text">文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕</div>
+	</div>
+
+	<br />
+	<br />
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
