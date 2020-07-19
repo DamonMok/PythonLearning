@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动和解决margin-top塌陷</title>
+
+	<style>
+		
+		/*解决margin-top塌陷，用在外层div*/
+		.clearfix:before, .clearfix:after{
+			content: "";
+			display: table;
+		}
+
+		/*清除浮动，用在外层div*/
+		.clearfix:after{
+			clear: both;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+</body>
+</html>
