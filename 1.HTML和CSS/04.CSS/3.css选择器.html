@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css选择器</title>
+
+	<style>
+		
+		/*1. 标签选择器：不建议使用，影响范围太大*/
+		*{
+			/*font-size: 26px;*/
+		}
+
+		h1{
+			color:blue;
+		}
+
+		
+		/*----------------------------------------------------*/
+
+		/*2. id选择器：会导致控件的id重复，不建议使用*/
+		#h2con{
+			font-style: italic;;
+		}
+
+
+		/*----------------------------------------------------*/
+
+
+		/*3.类选择器：一个类可应用于多个元素，一个元素可用多个类，推荐使用*/
+		.fontcolor{
+			color: red;
+		}
+
+		.fontbold{
+			font-weight: bold;
+		}
+
+
+		/*----------------------------------------------------*/
+
+
+		/*
+			3.层级选择器：选择父元素下的子元素，或者子元素下的子元素。
+			与标签元素结合使用，减少命名；
+			通过层级，防止命名冲突。
+		*/
+		.box1 span{
+			color: gold;
+		}
+
+		.box1 .span1{
+			text-decoration: underline;
+		}
+
+
+		/*----------------------------------------------------*/
+
+
+		/*3.组选择器：把多个选择器中相同的样式抽出来一起设置，不相同的另外设置*/
+		.s1,.s2{
+			font-size: 20px;
+		}
+
+		.s1{
+			color: red;
+		}
+
+		.s2{
+			color: blue;
+		}
+
+
+		/*----------------------------------------------------*/
+
+
+		/*4.伪类和伪元素选择器*/
+		/*4.1 伪类*/
+		.box2:hover{
+			color: red;
+		}
+
+		.box2:before{
+			content: '前面的内容';
+		}
+
+		.box2:after{
+			content: '后面的内容';
+		}
+
+
+	</style>
+	
+
+</head>
+<body>
+
+	<h1>标签选择器</h1>
+	<h1>标签选择器</h1>
+	<h1>标签选择器</h1>
+
+	<h2 id="h2con">id选择器</h2>
+	<h2 id="h2con">id选择器</h2>
+	<h2 id="h2con">id选择器</h2>
+
+	<div>
+		<h6 class="fontcolor">类选择器</h6>
+		<p class="fontcolor fontbold">类选择器</p>
+	</div>
+
+	<div class="box1">
+		<span>层级选择器</span>
+		<span class="span1">层级选择器</span>
+	</div>
+
+	<div>
+		<span class="s1">组选择器</span>
+		<span class="s2">组选择器</span>
+	</div>
+
+	<div class="box2">
+		<span>hello!</span>
+	</div>
+	
+</body>
+</html>
