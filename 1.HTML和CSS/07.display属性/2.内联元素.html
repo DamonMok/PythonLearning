@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联元素</title>
+
+	<style>
+		
+		.box{
+			font-size: 0px;
+		}
+
+		.box a{
+			font-size: 16px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<!-- 
+		a/span/em/b/strong/i等都是内联元素。
+		1.支持部分样式(不支持宽、高、margin上下、padding上下)；
+		2.宽高由内容决定；
+		3.盒子并在一行；
+		4.代码换行，盒子直接会产生间距；
+		5.子元素是内联元素的话，父元素可以通过test-align设置子元素的水平对齐方式
+	 -->
+	<a href="#">这是a标签</a>
+
+	<span>这是span</span>
+
+	<em>这是em</em>
+
+	<b>这是b</b>
+
+	<strong>这是strong</strong>
+
+	<i>这是i</i>
+
+
+	<!-- 解决元素间距方法1：写在一行 -->
+	<br />
+	<a href="#">解决元素直接的间距</a><a href="#">解决元素直接的间距</a><a href="#">解决元素直接的间距</a>
+
+	
+	<!-- 解决元素间距方法2：父元素把font-size设置为0，子元素再重新设置font-size -->
+	<div class="box">
+		<a href="#">解决元素直接的间距</a>
+		<a href="#">解决元素直接的间距</a>
+		<a href="#">解决元素直接的间距</a>
+	</div>
+	
+</body>
+</html>
