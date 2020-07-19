@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决margin塌陷</title>
+
+	<style>
+		/*解决margin-top塌陷方法3：使用伪元素(推荐使用)*/
+		.clearfix:before{
+			content: '';
+			display: table;
+		}
+		
+		.con{
+			width: 500px;
+			height: 400px;
+			background-color: green;
+
+			/*解决margin-top塌陷方法1：增加边框*/
+			/*border: 1px solid black;*/
+
+			/*解决margin-top塌陷方法2：增加overflow:hidden属性*/
+			/*overflow: hidden;*/
+		}
+
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+
+			/*会导致div塌陷*/
+			margin-top: 100px; 
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="con clearfix">
+		<div class="box"></div>
+	</div>
+
+
+</body>
+</html>
