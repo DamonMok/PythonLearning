@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻页列表标签</title>
+	<style>
+
+		.page{
+			width: 600px;
+			height: 40px;
+			border: 1px solid gray;
+
+			margin: 50px auto 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+
+			font-size: 0;
+		}
+
+		.page li{
+			display: inline-block;
+			font-size: 12px;
+			text-align: center;
+		}
+
+		.page li a{
+			height: 26px;
+			margin: 0 6px;
+			background-color: gold;
+			padding: 2px 6px;
+			text-decoration: none;
+			color: #000;
+			font: normal 12px/40px 'microsoft Yahei';
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<ul class="page">
+		<li><a href="#">上一页</a></li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><span>...</span></li>
+		<li><a href="#">17</a></li>
+		<li><a href="#">18</a></li>
+		<li><a href="#">19</a></li>
+		<li><a href="#">20</a></li>
+		<li><a href="#">下一页</a></li>
+	</ul>
+</body>
+</html>
