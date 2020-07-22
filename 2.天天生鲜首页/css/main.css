@@ -139,6 +139,79 @@
 }
 
 
+/* 商品分类 */
+.category_con{
+	width: 1200px;
+	height: 270px;
+	margin: 0 auto;
+}
+
+.category_con .goods_list{
+	width: 198px;
+	height: 270px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+
+.category_con .goods_list li{
+	height: 44px;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+	
+}
+
+.category_con .goods_list li:nth-child(1){
+	background: url(../images/icons.png) 32px -90px no-repeat;
+}
+
+.category_con .goods_list li:nth-child(2){
+	background: url(../images/icons.png) 28px -140px no-repeat;
+}
+
+.category_con .goods_list li:nth-child(3){
+	background: url(../images/icons.png) 30px -190px no-repeat;
+}
+
+.category_con .goods_list li:nth-child(4){
+	background: url(../images/icons.png) 34px -240px no-repeat;
+}
+
+.category_con .goods_list li:nth-child(5){
+	background: url(../images/icons.png) 32px -290px no-repeat;
+}
+
+.category_con .goods_list li:nth-child(6){
+	background: url(../images/icons.png) 32px -340px no-repeat;
+}
+
+.category_con .goods_list li a{
+	display: block;
+	font: normal 14px/44px 'Microsoft Yahei';
+	color: #333;
+	background: url(../images/icons.png) 180px -385px no-repeat;
+}
+
+.category_con .goods_slide{
+	width: 760px;
+	height: 270px;
+	background: red;
+}
+
+.category_con .goods_adver{
+	width: 240px;
+	height: 270px;
+	background: gold;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
