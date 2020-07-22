@@ -1,0 +1,31 @@
+/* header */
+.header_con{
+	height: 29px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+.header_con .welcome{
+	font: normal 12px/29px 'Microsoft Yahei';
+	margin-left: 28px;
+	color: #6d6d6d;
+}
+
+.user{
+	margin-right: 28px;
+}
+
+.user_com li{
+	float: left;
+	height: 29px;
+}
+
+.user_com li a, .user_com li span{
+	font: normal 12px/29px 'Microsoft Yahei';
+	color: #686868;
+}
+
+.user_com li span{
+	margin: 0 14px;
+}
+
