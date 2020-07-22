@@ -2,6 +2,7 @@
 .header_con{
 	height: 29px;
 	border-bottom: 1px solid #ddd;
+	background-color: #f7f7f7;
 }
 
 
@@ -28,4 +29,97 @@
 .user_com li span{
 	margin: 0 14px;
 }
+
+
+
+/* logo、搜索框、购物车 */
+.center{
+	width: 1200px;
+	height: 114px;
+	margin:0 auto;
+}
+
+.center .logo{
+	margin: 26px 0 0 16px;
+}
+
+
+.search_bar{
+	width: 618px;
+	height: 38px;
+	border: 1px solid #37ab40;
+	margin: 34px 0 0 124px;
+	background: url(../images/icons.png) no-repeat 9px 9px;
+}
+
+
+.search_bar .input_text{
+	width: 480px;
+	height: 38px;
+	margin-left: 38px;
+	border: 0px;
+	outline: none;
+	font: normal 12px/38px 'Microsoft Yahei';
+}
+
+.search_bar .input_btn{
+	width: 100px;
+	height: 38px;
+	background-color: #37ab40;
+	border: 0px;
+	color: #fff;
+	font: normal 14px/38px 'Microsoft Yahei';
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+.cart{
+	width: 198px;
+	height: 38px;
+	border: 1px solid #e0e0e0;
+	margin-top: 34px;
+	background: url(../images/icons.png) 12px -43px no-repeat;
+}
+
+.cart .cart_name{
+	margin-left: 56px;
+	font: normal 14px/38px 'Microsoft Yahei';
+	color: #37ab40;
+}
+
+.show_count{
+	width: 40px;
+	height: 38px;
+	background-color: #ff8800;
+	font: bold 18px/38px 'Microsoft Yahei';
+	color: #fff;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
