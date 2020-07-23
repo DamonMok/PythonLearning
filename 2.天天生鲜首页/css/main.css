@@ -6,7 +6,7 @@
 }
 
 
-.header_con .welcome{
+.welcome{
 	font: normal 12px/29px 'Microsoft Yahei';
 	margin-left: 28px;
 	color: #6d6d6d;
@@ -39,7 +39,7 @@
 	margin:0 auto;
 }
 
-.center .logo{
+.logo{
 	margin: 26px 0 0 16px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 
-.search_bar .input_text{
+.input_text{
 	width: 480px;
 	height: 38px;
 	margin-left: 38px;
@@ -62,7 +62,7 @@
 	font: normal 12px/38px 'Microsoft Yahei';
 }
 
-.search_bar .input_btn{
+.input_btn{
 	width: 100px;
 	height: 38px;
 	background-color: #37ab40;
@@ -82,7 +82,7 @@
 	background: url(../images/icons.png) 12px -43px no-repeat;
 }
 
-.cart .cart_name{
+.cart_name{
 	margin-left: 56px;
 	font: normal 14px/38px 'Microsoft Yahei';
 	color: #37ab40;
@@ -146,65 +146,216 @@
 	margin: 0 auto;
 }
 
-.category_con .goods_list{
+.goods_list{
 	width: 198px;
 	height: 270px;
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
 }
 
-.category_con .goods_list li{
+.goods_list li{
 	height: 44px;
 	text-align: center;
 	border-bottom: 1px solid #eee;
 	
 }
 
-.category_con .goods_list li:nth-child(1){
+.goods_list li:nth-child(1){
 	background: url(../images/icons.png) 32px -90px no-repeat;
 }
 
-.category_con .goods_list li:nth-child(2){
+.goods_list li:nth-child(2){
 	background: url(../images/icons.png) 28px -140px no-repeat;
 }
 
-.category_con .goods_list li:nth-child(3){
+.goods_list li:nth-child(3){
 	background: url(../images/icons.png) 30px -190px no-repeat;
 }
 
-.category_con .goods_list li:nth-child(4){
+.goods_list li:nth-child(4){
 	background: url(../images/icons.png) 34px -240px no-repeat;
 }
 
-.category_con .goods_list li:nth-child(5){
+.goods_list li:nth-child(5){
 	background: url(../images/icons.png) 32px -290px no-repeat;
 }
 
-.category_con .goods_list li:nth-child(6){
+.goods_list li:nth-child(6){
 	background: url(../images/icons.png) 32px -340px no-repeat;
 }
 
-.category_con .goods_list li a{
+.goods_list li a{
 	display: block;
 	font: normal 14px/44px 'Microsoft Yahei';
 	color: #333;
 	background: url(../images/icons.png) 180px -385px no-repeat;
 }
 
-.category_con .goods_slide{
+.slide_con{
 	width: 760px;
 	height: 270px;
 	background: red;
+	position: relative;
+	overflow: hidden;
 }
 
-.category_con .goods_adver{
+.slide_pic{
+	position: absolute;
+	width: 3040px;
+	height: 270px;
+	left: 0px;
+	top: 0px;
+}
+
+.slide_pic li{
+	float: left;
+}
+
+.pre{
+	position: absolute;
+	width: 17px;
+	height: 23px;
+	background: url(../images/icons.png) 0px -450px no-repeat;
+	left: 11px;
+	top: 122px;
+	cursor: pointer;
+}
+
+.next{
+	position: absolute;
+	width: 17px;
+	height: 23px;
+	background: url(../images/icons.png) 0px -500px no-repeat;
+	right: 11px;
+	top: 122px;
+	cursor: pointer;
+}
+
+.points{
+	position: absolute;
+	width: 100%;
+	height: 11px;
+	left: 0;
+	bottom: 9px;
+	text-align: center;
+	font-size: 0px;
+}
+
+.points li{
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin: 0 5px;
+	background-color: #666;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.points li:nth-child(1){
+	background-color: #cecece;
+}
+
+.goods_adver{
 	width: 240px;
 	height: 270px;
 	background: gold;
 }
 
+/* 解决部分浏览器图片之间有3px间距bug */
+.goods_adver{
+	display: block;
+}
 
 
+/* 商品列表 */
+.models_con{
+	width: 100%;
+	height: 356px;
+}
+
+.model_title{
+	width: 1200px;
+	height: 40px;
+	margin: 15px auto 0;
+	border-bottom: 2px solid #3fac43;
+}
+
+.model_title h3{
+	height: 40px;
+	font: bolder 16px/40px 'Microsoft Yahei';
+	color: #35aa3e;
+}
+
+.sub_title ul{
+	height: 32px;
+	margin: 8px 0 0 20px;
+}
+
+.sub_title ul li{
+	float: left;
+	font: normal 12px/32px 'Microsoft Yahei';
+	margin-right: 12px;
+	color: #666;
+}
+
+.sub_title ul .line{
+	margin-right: 20px;
+}
+
+.model_title .more{
+	margin-top: 6px;
+	font: normal 14px/34px 'Microsoft Yahei';
+	color: #666;
+}
+
+
+
+
+.model_list{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+} 
+
+.model_list li{
+	float: left;
+	width: 250px;
+	height: 299px;
+	border-right: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.model_list .brand{
+	width: 200px;
+	height: 299px;
+}
+
+.model_list li h4{
+	display: inline-block;
+	font: normal 14px/14px 'Microsoft Yahei';
+	color: #666;
+	margin-top: 24px;
+}
+
+
+.model_list li img{
+	display: block;
+	margin: 40px auto 0;
+}
+
+.model_list .brand img{
+	margin-top: 0px;
+}
+
+
+.model_list li span{
+	display: block;
+	font: bold 16px/16px 'Microsoft Yahei';
+	color: #c40000;
+	margin-top: 12px;
+}
 
 
 
