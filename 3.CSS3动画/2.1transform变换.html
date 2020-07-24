@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform变换</title>
+	<style>
+		
+		/* 位移 */
+		.translate{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			margin: 50px auto;
+			transition: all 1s ease;
+		}
+
+		.translate:hover{
+
+			transform: translate(30px, 30px);
+		}
+
+		/* 缩放 */
+		.scale{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			margin: 30px auto;
+			transition: all 500ms ease;
+		}
+
+		.scale:hover{
+			transform: scale(3, 3);
+		}
+
+		/* 旋转 */
+		.rotate{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			margin: 30px auto;
+			transition: all 500ms ease;
+		}
+
+		.rotate:hover{
+			transform: rotate(45deg);
+		}
+
+		/* 中心点 */
+		.transformOrigin1, .transformOrigin2, .transformOrigin3, .transformOrigin4{
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 0px 30px;
+
+			background-color: gold;
+
+			transform-origin: center center;
+			transition: all 500ms ease;
+		}
+
+		.transformOrigin2{
+			transform-origin: left top;
+		}
+
+		.transformOrigin3{
+			transform-origin: right top;
+		}
+
+		.transformOrigin2{
+			transform-origin: right bottom;
+		}
+
+		.transformOrigin1:hover, .transformOrigin2:hover, .transformOrigin3:hover, .transformOrigin4:hover{
+			transform: rotate(45deg);
+		}
+
+
+	</style>
+</head>
+<body>
+	<!-- 
+		1.translate(x,y)：设置盒子位移
+		
+		2.scale(x,y)：设置盒子缩放,缩放不会影响其他标准文档流的元素
+	
+		3.rotate(deg)：设置盒子旋转
+
+		4.skew(x-angle,y-angle)：设置盒子斜切
+
+		5.perspective：设置盒子透视
+
+		6.transform-style flat|preserve-3d：设置盒子是否按3d空间显示
+
+		7.translateX、translateY、translateZ：设置三维移动
+
+		8.rotateX、rotateY、rotateZ：设置三维旋转
+
+		9.scaleX、scaleY、scaleZ：设置三维缩放
+
+		10.transform-origin(left|center|right, top|center|bottom)：设置变形的中心点
+
+		11.backface-visibility：设置盒子背面是否可见
+	 -->
+
+	<div class="translate"></div>
+
+	<div class="scale"></div>
+
+	<div class="rotate"></div>
+
+	<div class="transformOrigin1">中心点</div>
+	<div class="transformOrigin2">中心点</div>
+	<div class="transformOrigin3">中心点</div>
+	<div class="transformOrigin4">中心点</div>
+
+
+</body>
+</html>
