@@ -71,7 +71,7 @@
 		}
 
 		.transformOrigin1:hover, .transformOrigin2:hover, .transformOrigin3:hover, .transformOrigin4:hover{
-			transform: rotate(45deg);
+			transform: rotate(-45deg);
 		}
 
 
@@ -93,13 +93,13 @@
 
 		7.translateX、translateY、translateZ：设置三维移动
 
-		8.rotateX、rotateY、rotateZ：设置三维旋转
+		8.rotateX、rotateY、rotateZ：设置三维旋转,立体旋转需要配合透视属性perspective(800px)使用，不然会看不到效果
 
 		9.scaleX、scaleY、scaleZ：设置三维缩放
 
 		10.transform-origin(left|center|right, top|center|bottom)：设置变形的中心点
 
-		11.backface-visibility：设置盒子背面是否可见
+		11.backface-visibility：设置盒子背面是否可见(visible(默认)|hidden)
 	 -->
 
 	<div class="translate"></div>

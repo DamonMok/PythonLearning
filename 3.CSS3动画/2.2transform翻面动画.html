@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻面动画</title>
+	<style type="text/css">
+		
+		.turn_over{
+			width: 220px;
+			height: 320px;
+			border: 1px solid #000;
+			margin: 50px auto;
+			position: relative;
+			transform-style: preserve-3d; /*需要在父容器指定使用3D*/
+		}
+
+		.front, .back{
+			float: left;
+			left: 10px;
+			top: 10px;
+			position: absolute;
+			transition: all 2s ease;
+			backface-visibility: hidden;
+		}
+
+		.front{
+			transform: perspective(800px) rotateY(0deg);
+		}
+
+		.back{
+			transform: perspective(800px) rotateY(-180deg);
+		}
+
+		.turn_over:hover .front{
+			transform: perspective(800px) rotateY(180deg);
+		}
+
+		.turn_over:hover .back{
+			transform: perspective(800px) rotateY(0deg);
+		}
+
+	
+
+
+	</style>
+</head>
+<body>
+	<div class="turn_over">
+		<img src="images/banner01.jpg" alt="" class="front">
+		<img src="images/banner06.jpg" alt="" class="back">
+	</div>
+</body>
+</html>
