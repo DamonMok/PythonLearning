@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>流体布局</title>
+	<style>
+		
+		.float{
+			height: 200px;
+			background-color: gold;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.float li{
+			float: left;
+
+			/*设置边框方法1*/
+			/*width: calc(25% - 4px);*/
+
+			/*设置边框方法2*/
+			width: 25%;
+			box-sizing: border-box;
+			height: 200px;
+			border: 2px solid black;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<!-- 
+		1.流体布局：(不要忘记设置视口meta:vp)
+			使用百分比来设置元素的宽度，元素的高度按实际高度写固定值；
+			流体布局中，元素的边线无法用百分比，可以使用以下2种方法：
+			1）使用样式中的计算函数：calc(25% - 4px);
+			2) 使用box-sizing=border-box属性，将盒子设置为从边线计算盒子尺寸(默认从内容开始计算box-sizing=content-box)
+	 -->
+
+	<ul class="float">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+
+</body>
+</html>
