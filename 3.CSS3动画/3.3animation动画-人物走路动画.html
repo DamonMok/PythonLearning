@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人物走路动画</title>
+	<style>
+
+		@keyframes run{
+			from{
+				left: 0px;
+			}
+
+			to{
+				left: -390px;
+			}
+		}
+		
+		.running{
+			width: 86px;
+			height: 175px;
+			background-color: gold;
+			margin: 50px auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.running img{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			/*animation：name duration timing-function delay iteration-count direction;*/
+			animation: run 800ms steps(5) 0s infinite normal;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="running">
+		<img src="images/running.jpeg" alt="">
+	</div>
+</body>
+</html>
