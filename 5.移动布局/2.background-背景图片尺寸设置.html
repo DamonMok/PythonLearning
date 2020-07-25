@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background</title>
+	<style>
+			
+		.banner{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			border: 2px solid black;
+
+			background: url(images/banner01.jpg) no-repeat;
+			
+			/*1.直接设置尺寸*/
+			background-size: 100px 100px;
+
+			/*根据容器的百分比*/
+			background-size: 100% 100%;
+
+			/*根据图片的真实大小设置*/
+			background-size: auto;
+
+			/*背景图缩放至全部覆盖容器，图片会被拉伸*/
+			background-size: cover;
+
+			/*背景图被包裹在容器内，即宽或高其一达到容器边缘就不再缩放*/
+			background-size: contain;
+
+
+		}	
+
+
+	</style>
+
+</head>
+<body>
+	<div class="banner"></div>
+</body>
+</html>
