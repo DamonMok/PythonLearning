@@ -1,0 +1,294 @@
+.wrap{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: #f0eeef
+}
+
+.header{
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	background-color: #37ab40;
+}
+
+.logo{
+	display: block;
+	margin: 5px auto;
+	width: 74px;
+	height: 30px;
+}
+
+.logo img{
+	width: 100%
+}
+
+.search{
+	position: absolute;
+	width: 27px;
+	height: 28px;
+	right: 10px;
+	top: 6px;
+	background: url(../images/icons.png) no-repeat;
+	background-size: 60px 840px;
+}
+
+.center{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 40px;
+	bottom: 48px;
+	background-color: #efefef;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/*顶部滚动图*/
+.slide{
+	width: 100%;
+	height: 112px;
+	background-color: red;
+	overflow: hidden;
+}
+
+.slide img{
+	width: 100%;
+}
+
+/*分类*/
+.category_wrap{
+	width: 100%;
+	height: 172px;
+	margin-top: 6px;
+	background-color: white;
+}
+
+.category{
+	width: calc(100% - 40px);
+	height: 156px;
+	margin:8px 20px;
+	font-size: 0;
+}
+
+.category li{
+	display: inline-block;
+	width: 25%;
+	height: 72px;
+	margin: 3px 0;
+	text-align: center;
+}
+
+.category li a{
+	display: inline-block;
+	width: 58px;
+	height: 58px;
+	background-size: 60px 840px;
+	background-color: red;
+}
+
+.category li h2{
+	font: normal 12px/18px 'Microsoft Yahei';
+	color: #5c5c5c;
+}
+
+.category li:nth-child(1) a{
+	background: url(../images/icons.png) 0px -59px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(2) a{
+	background: url(../images/icons.png) 0px -119px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(3) a{
+	background: url(../images/icons.png) 0px -179px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(4) a{
+	background: url(../images/icons.png) 0px -239px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(5) a{
+	background: url(../images/icons.png) 0px -299px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(6) a{
+	background: url(../images/icons.png) 0px -359px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(7) a{
+	background: url(../images/icons.png) 0px -419px no-repeat;
+	background-size: 60px 840px;
+}
+
+.category li:nth-child(8) a{
+	background: url(../images/icons.png) 0px -59px no-repeat;
+	background-size: 60px 840px;
+}
+
+/*列表*/
+.list{
+	width: 100%;
+	height: 300px;
+	margin-top: 6px;
+	background-color: white;
+}
+
+.desc{
+	width: 100%;
+	height: 34px;
+}
+
+.title{
+	font: normal 14px/14px 'Microsoft Yahei';
+	color: #ffc83d;
+	border-left: 2px solid #ffc83d;
+	padding-left: 6px;
+	margin: 12px 0 0 8px;
+}
+
+.more{
+	font: normal 12px/12px 'Microsoft Yahei';
+	margin: 14px 10px 0 0;
+	color: #949494;
+}
+
+.pic{
+	width: calc(100% - 12px);
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.pic img{
+	width: 100%;
+}
+
+.models{
+	width: calc(100% - 10px);
+	height: 150px;
+	margin: 8px auto 0;
+}
+
+.models li{
+	float: left;
+	width: 33.33%;
+	height: 150px;
+	border-right: 1px solid #f8f8f8;
+	box-sizing: border-box;
+	text-align: center;
+	position: relative;
+}
+
+.models li img{
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+
+}
+
+.models li h3{
+	width: 76px;
+	font: normal 12px/12px 'Microsoft Yahei';
+	color: #797979;
+	padding-left: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.models li:nth-child(3){
+	border: none;
+}
+
+.unit{
+	font: normal 12px/12px 'Microsoft Yahei';
+	color: #c8c8c8;
+	padding-left: 10px;
+	text-align: left;
+	margin-top: 10px;
+}
+
+.price{
+	font: normal 12px/12px 'Microsoft Yahei';
+	color: #ff835d;
+	padding-left: 10px;
+	text-align: left;
+	margin-top: 5px;
+}
+
+.add{
+	position: absolute;
+	right: 10px;
+	bottom: -2px;
+	width: 34px;
+	height: 34px;
+	background: url(../images/icons.png) 0px -540px no-repeat;
+	background-size: 60px 840px;
+
+}
+
+.footer{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 48px;
+}
+
+.tabbar{
+	width: 100%;
+	height: 100%;
+	background-color: #efefef;
+}
+
+.tabbar li{
+	float: left;
+	width: 25%;
+	height: 100%;
+
+}
+
+.tabbar li a{
+	display: block;
+	width: 28px;
+	height: 26px;
+	
+	margin: 4px auto 0;
+}
+
+.tabbar li:nth-child(1) a{
+	background: url(../images/icons.png) no-repeat 0px -600px;
+	background-size: 60px 840px;
+}
+
+.tabbar li:nth-child(2) a{
+	background: url(../images/icons.png) no-repeat 0px -659px;
+	background-size: 60px 840px;
+}
+
+.tabbar li:nth-child(3) a{
+	background: url(../images/icons.png) no-repeat 0px -720px;
+	background-size: 60px 840px;
+}
+
+.tabbar li:nth-child(4) a{
+	background: url(../images/icons.png) no-repeat 0px -780px;
+	background-size: 60px 840px;
+}
+
+.tabbar li h2{
+	font: normal 12px/15px 'Microsoft Yahei';
+	color: #a2a2a2;
+	margin: 2px auto;
+	transform: scale(0.8, 0.8);
+	text-align: center;
+}
