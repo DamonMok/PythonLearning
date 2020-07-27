@@ -1,0 +1,313 @@
+.wrap{
+	position: absolute;
+	left: 0.0rem;
+	right: 0.0rem;
+	top: 0.0rem;
+	bottom: 0.0rem;
+	background-color: black;
+
+}
+
+/*header*/
+.header{
+	position: absolute;
+	left: 0.0rem;
+	top: 0.0rem;
+	width: 100%;
+	height: 2.45rem;
+	background-color: #37ab40;
+}
+
+.logo{
+	display: block;
+	width: 4.6rem;
+	height: 1.9rem;
+	margin: 0.3rem auto;
+}
+
+.logo img{
+	width: 100%;
+}
+
+.search{
+	position: absolute;
+	top: 0.5rem;
+	right: 0.7rem;
+	width: 1.45rem;
+	height: 1.45rem;
+	background: url(../images/icons.png);
+	background-size: 3.0rem 42.0rem;
+}
+
+/*center*/
+.center{
+	position: absolute;
+	left: 0.0rem;
+	right: 0.0rem;
+	top: 2.45rem;
+	bottom: 3.0rem;
+	background-color: #efefef;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/*滚动图*/
+.slide{
+	display: block;
+	height: 7.0rem;
+}
+
+.slide img{
+	width: 100%;
+}
+
+
+/*分类*/
+.category_wrap{
+	width: 100%;
+	height: 9.3rem;
+	margin-top: 0.5rem;
+	background-color: white;
+	/*overflow: hidden;*/
+}
+
+.category{
+	width: 18rem;
+	height: 8.2rem;
+	margin: 0.85rem 0 0.25rem 1.3rem;
+}
+
+.category li{
+	float: left;
+	width: 2.9rem;
+	height: 4.1rem;
+	margin-right: 1.6rem;
+}
+
+.category li a{
+	display: block;
+	width: 2.9rem;
+	height: 2.9rem;
+	background: url(../images/icons.png) no-repeat;
+	background-size: 3.0rem 42.0rem;
+}
+
+.category li:nth-child(1) a{
+	background-position: 0.05rem -3.0rem;
+}
+
+.category li:nth-child(2) a{
+	background-position: 0.05rem -6.0rem;
+}
+
+.category li:nth-child(3) a{
+	background-position: 0.05rem -9.0rem;
+}
+
+.category li:nth-child(4) a{
+	background-position: 0.05rem -12.0rem;
+}
+
+.category li:nth-child(5) a{
+	background-position: 0.05rem -15.0rem;
+}
+
+.category li:nth-child(6) a{
+	background-position: 0.05rem -18.0rem;
+}
+
+.category li:nth-child(7) a{
+	background-position: 0.05rem -21.0rem;
+}
+
+.category li:nth-child(8) a{
+	background-position: 0.05rem -24.0rem;
+}
+
+.category li h2{
+	font: normal 14px/22px 'Microsoft Yahei';
+	color: #5a5a5a;
+	text-align: center;
+}
+
+/*列表*/
+.list_wrap{
+	width: 100%;
+	height: 17.25rem;
+	margin-top: 0.5rem;
+	background-color: white;
+}
+
+.title{
+	width: 100%;
+	height: 34px;
+}
+
+.title em{
+	float: left;
+	font: bold 18px/0.9rem 'Microsoft Yahei';
+	margin: 0.8rem 0.0rem 0.0rem 0.5rem;
+	color: #fcc01c;
+}
+
+.title h2{
+	float: left;
+	font: normal 16px/0.8rem 'Microsoft Yahei';
+	margin: 0.8rem 0.0rem 0.0rem 0.4rem;
+	color: #fcc01c;
+}
+
+.title a{
+	float: right;
+	font: normal 12px/0.6rem 'Microsoft Yahei';
+	margin: 0.9rem 0.6rem 0.2rem 0.0rem;
+	color: #545454;
+}
+
+.banner_pic{
+	display: block;  /*解决img元素下面多出3px的bug*/
+	width: 17.8rem;
+	margin: 0.5rem 0 0 0.5rem;
+}
+
+.goods{
+	width: 17.8rem;
+	height: 9.4rem;
+	margin: 0.5rem 0 0.7rem 0.5rem;
+}
+
+.goods li{
+	float: left;
+	width: 5.8rem;
+	height: 9.4rem;
+	border-right: 1px solid #f9f9f9;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.goods li:nth-child(3){
+	border-right: none;
+}
+
+.goods li:nth-child(2) h2{
+	margin-left: 0.6rem;
+}
+
+.goods li:nth-child(3) h2{
+	margin-left: 0.6rem;
+}
+
+.goods li img{
+	display: block;
+	width: 4.5rem;
+	height: 4.5rem;
+	margin-left: 0.65rem;
+}
+
+.goods li h2{
+	font: normal 14px/0.7rem 'Microsoft Yahei';
+	width: 4.7rem;
+	color: #a1a1a1;
+	margin-top: 1.3rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.goods li .unit{
+	font: normal 12px/0.6rem 'Microsoft Yahei';
+	color: #cccccc;
+	margin-top: 0.7rem;
+}
+
+.goods li .price{
+	font: bold 12px/0.6rem 'Microsoft Yahei';
+	color: #fe7048;
+	margin-top: 0.3rem;
+}
+
+.goods li a{
+	position: absolute;
+	right: 0.6rem;
+	bottom: 0.0rem;
+	width: 1.75rem;
+	height: 1.75rem;
+	background: url(../images/icons.png) no-repeat 0.0rem -27.0rem;
+	background-size: 3.0rem 42.0rem;
+}
+
+
+/*footer*/
+.footer{
+	position: absolute;
+	left: 0.0rem;
+	bottom: 0.0rem;
+	width: 100%;
+	height: 3.0rem;
+	background-color: #efefef;
+}
+
+.tabbar{
+	width: 100%;
+	height: 3.0rem;
+}
+
+.tabbar li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.tabbar li a{
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-top: 0.6rem;
+	background: url(../images/icons.png) no-repeat -0.05rem -30.05rem;
+	background-size: 3.0rem 42.0rem;
+}
+
+.tabbar li:nth-child(1) a{
+	background-position: -0.05rem -30.05rem;
+}
+
+.tabbar li:nth-child(2) a{
+	background-position: -0.05rem -33.0rem;
+}
+
+.tabbar li:nth-child(3) a{
+	background-position: -0.05rem -36.0rem;
+}
+
+.tabbar li:nth-child(4) a{
+	background-position: -0.05rem -39.0rem;
+}
+
+.tabbar h3{
+	display: block;
+	font: normal 12px/0.6rem 'Microsoft Yahei';
+	color: #a8a8a8;
+	margin-top: -2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
