@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符串的操作方法</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var sStr = '#div';
+			alert(sStr.charAt(0));  // 输出:#
+
+			alert(sStr.substring(1));  // 输出:div
+
+			alert(sStr.indexOf('d'));  // 输出:1
+
+			alert(sStr.indexOf('f'));  // 输出-1
+
+
+			// 字符串反转
+			var sNewStr = sStr.split('').reverse().join('');
+			alert(sNewStr);
+		}
+
+
+	</script>
+</head>
+<body>
+	<!-- 
+		1.字符串的合并操作："+";
+
+		2.parseInt()：将数字字符串转化为正数；
+
+		3.parseFloat()：将数字字符串转化为小数；
+
+		4.split()：把一个字符串分隔成字符串组成的数组；
+
+		5.charAt(n)：获取字符串中的某一个字符；
+
+		6.indexOf()：查找字符串是否含有某字符；有则返回下标、没有则返回-1
+
+		7.substring()：截取字符串 用法：substring(start, end)(不包括end)；如果不写end参数，就是截取到末尾
+
+		8.toUpperCase()：字符串转为大写；
+
+		9.toLowerCase()：字符串转为小写；
+
+	 -->
+</body>
+</html>
