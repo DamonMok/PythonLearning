@@ -1,0 +1,16 @@
+body{
+	background-color: lightblue;
+}
+
+.light, .dark{
+	border: none;
+	outline: none;
+}
+
+.light:hover{
+	background-color: lightblue;
+}
+
+.dark:hover{
+	background-color: lightgray;
+}
