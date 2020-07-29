@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提取行间函数</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var oBtn = document.getElementById('btn');
+
+			// 通过操作onclick属性，提取行间事件
+			oBtn.onclick = fnChangeColor;
+
+
+			// 事件调用的函数
+			function fnChangeColor(){
+				
+			var oLink = document.getElementById('link');
+
+			oLink.style.color = 'red';
+		}
+
+		}
+
+
+	</script>
+</head>
+<body>
+	<a href="#" id="link">去百度</a>
+	<br  />
+	<input type="button" value="改变文字颜色" id="btn">
+</body>
+</html>
