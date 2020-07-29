@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量类型和获取元素</title>
+	<script type="text/javascript">
+		
+		// 需要等全部标签和标签内容加载完在执行js，否则会获取不到、报错。
+		window.onload = function(){
+
+			//	获取元素
+			var oDiv = document.getElementById('div');
+
+			//	改变元素的style属性
+			oDiv.style.backgroundColor = 'red';
+			oDiv.style.width = '100'+'px';
+			oDiv.style.height = '100'+'px';
+		}
+	
+
+	</script>
+</head>
+<body>
+	<!-- 
+		1.定义变量需要用var关键字：
+			1.1  区分大小写
+			1.2  第一个字符必须是字母、下划线或者美元符号
+			1.3  其他字符可以使字母、数字、下划线、美元符号
+			分开命名：
+			var sName = 'Damon';
+
+			同时命名多个：
+			var sName = 'Damon', var iAge = 18;
+
+		2.1 变量类型：
+			5种基本数据类型：
+				1.number 数字类型
+				2.string 字符串类型
+				3.boolean 布尔类型 true 或者 false
+				4.undefined 变量声明未初始化
+				5.null 表示空对象
+			1种复合类型：
+				object
+
+		3.匈牙利命名风格
+			对象o Object	比如：odiv
+			数字a Array 比如：aItems
+			字符串s String 比如：sUserName
+			正数i Integer 比如：iItemCount
+			布尔值b Boolean 比如：blsComplete
+			浮点数f float 比如：iPrice
+			函数fn Function 比如：fnHandler
+			正则表达式re RegExp 比如：reEmailCheck
+
+	 -->
+
+	 <div id='div'></div>
+</body>
+</html>
