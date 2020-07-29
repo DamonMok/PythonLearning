@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			//	获取元素
+			oLink = document.getElementById('link');
+
+			//  操作元素属性：
+			// 1.js属性和html的属性写法一样；
+			// 2.'class'属性写成'className'
+			// 3.'style'属性里面，有横杠的改成驼峰式，比如：'font-size'写成'fontSize'。
+			oLink.href = 'http://www.baidu.com';
+			oLink.title = "这是去百度的链接";
+			oLink.style.color = 'red';
+			oLink.style.fontSize = 18+'px';
+
+			oLink.className = 'aLink';
+
+		}
+
+	</script>
+
+
+	<style>
+		
+		.aLink{
+			font-weight: bold;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<a href="" id='link'>去百度</a>
+</body>
+</html>
