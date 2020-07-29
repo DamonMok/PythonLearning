@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var oLink = document.getElementById('link');
+
+			//如果属性是变量，则需要用[]去设置
+			var sMystyle = 'color';
+			var sMyvalue = 'red';
+
+			// 可以用for循环添加属性
+			// var sMystyle = 'fontSize';
+			// var sMyvalue = '18px';
+
+			oLink.style[sMystyle] = sMyvalue;
+
+
+		}
+
+	</script>
+</head>
+<body>
+	<a id="link">去百度啊</a>
+</body>
+</html>
