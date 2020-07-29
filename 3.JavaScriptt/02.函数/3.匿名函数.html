@@ -2,24 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>提取行间函数</title>
+	<title>匿名函数</title>
 	<script type="text/javascript">
 		
 		window.onload = function(){
 
 			var oBtn = document.getElementById('btn');
 
-			// 通过操作onclick属性，提取行间事件
-			oBtn.onclick = fnChangeColor;
+			// 只有这里需要调用，其他地方不需要调用，则可以写成匿名函数
+			oBtn.onclick = function(){
 
+				var oLink = document.getElementById('link');
 
-			// 事件调用的函数
-			function fnChangeColor(){
+				oLink.style.color = 'red';
 
-			var oLink = document.getElementById('link');
-
-			oLink.style.color = 'red';
-			}
+			};
 
 		}
 
