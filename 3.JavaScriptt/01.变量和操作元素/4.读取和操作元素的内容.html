@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			var oDiv = document.getElementById('con');
+
+			// 读取元素内容
+			sStr = oDiv.innerHTML;
+			alert(sStr);
+
+			// 操作元素内容
+			// oDiv.innerHTML = "更改内容";
+			oDiv.innerHTML = "<a href='http://www.baidu.com'>去百度</a>"
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<div id="con">这是一个DIV</div>
+</body>
+</html>
