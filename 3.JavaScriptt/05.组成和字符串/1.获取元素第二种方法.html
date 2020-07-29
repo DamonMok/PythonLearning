@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取元素的第二种方法</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			// 获取整个文档流的li元素
+			var aLis = document.getElementsByTagName('li');
+			alert(aLis);  // [object HTMLCollection]一个结果集
+			alert(aLis.length);  // 13
+
+
+			//  获取ul元素下的li
+			var oUl1 = document.getElementById('ul1');
+			var aLis1 = oUl1.getElementsByTagName('li');
+			alert(aLis1.length);  // 8
+
+
+			//  获取div下所有span元素，一直往下(div的子集、子子集......)都会被获取
+			var oDiv = document.getElementById('div_con');
+			var aSpans = oDiv.getElementsByTagName('span');
+			alert(aSpans.length);
+
+
+			//  通过循环遍历，操作元素
+			for (var i = 0; i < aSpans.length; i++) {
+				aSpans[i].style.color = 'red';
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+
+	<ul id="ul2">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+
+	<div id="div_con">
+		<span>
+			12<span>34</span>
+		</span>
+	</div>
+</body>
+</html>
