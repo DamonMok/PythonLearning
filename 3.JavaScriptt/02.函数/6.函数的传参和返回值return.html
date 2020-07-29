@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的传参和返回值return</title>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+
+			oLink = document.getElementById('link');
+
+
+			// 传参
+			function fnChangeStyle(sStyle, sValue){
+
+				oLink.style[sStyle] = sValue;
+			}
+
+			fnChangeStyle('color', 'red');
+			fnChangeStyle('fontSize', '30px')
+
+
+			// 返回值
+			var ret = fnAdd(1, 2);
+			alert(ret);
+
+			function fnAdd(iNum1, iNum2){
+
+				return iNum1+iNum2;
+			}
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<a href="#" id="link">去百度</a>
+</body>
+</html>
