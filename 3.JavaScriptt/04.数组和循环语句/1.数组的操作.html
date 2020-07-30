@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组的操作</title>
+	<script type="text/javascript">
+		
+		// 1.1 实例化创建数组
+		var aList1 = new Array(1, 2, 3);
+
+
+		// 1.2 直接创建
+		var aList2 = [1, 2, 3];
+
+		// 2.1 获取数组长度
+		// alert(aList2.length);
+
+		// 3. 获取某个下标的元素
+		// alert(aList2[1]);
+
+		// 4. 将数组元素用一个字符合并成字符串
+		var aList3 = [2020, 7, 29];
+		// alert(aList3.join('-')); 
+
+		// 5. push()和pop()从数组最后增加或者删除成员
+		var aList4 = [1, 2, 3, 4];
+		aList4.push(5);
+		// alert(aList4);  // 5
+
+		aList4.pop();
+		// alert(aList4.length);  // 4
+
+		// 6. unshift()和shift()从数组前面增加或者删除成员
+		aList4.unshift(0);
+		// alert(aList4);  // 0,1,2,3,4
+
+		aList4.shift();
+		// alert(aList4);  // 1,2,3,4
+
+		// 7. reverse()将数组反转
+		// alert(aList4.reverse());  // 4,3,2,1
+
+		// 8. indexOf()返回数组中元素第一次出现的索引值
+		// alert(aList4.indexOf(3));  // 2
+		// alert(aList4.indexOf(5));  // -1,找不到则返回-1
+
+		// 9. splice()在数组中增加或删除成员
+		aList4.splice(2, 1, 5, 6, 7);  // 从第2个元素开始，删除1个元素，然后在此位置增加5，6，7这个三个元素
+		alert(aList4);  // 1,2,5,6,7,4
+
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
