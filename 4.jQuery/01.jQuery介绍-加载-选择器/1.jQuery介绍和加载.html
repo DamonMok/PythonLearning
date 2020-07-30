@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery介绍和加载</title>
+	<!-- 引入js文件 -->
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script> 
+	<script type="text/javascript">
+			
+		// 原生js
+		window.onload = function(){
+			var oDiv = document.getElementById('box');
+			alert('原生js:' + oDiv);  // 原生js:[object HTMLDivElement]
+		}
+
+		// ready比window.onload的运行时机更提前
+		// jQuery：加载完标签后，就开始运行；
+		// 原生js：加载完标签，再渲染完之后，才运行
+
+		// jQuery加载写法1：
+		$(document).ready(function(){
+
+			var $div = $('#box');
+			alert('jQuery1:' + $div);  // jQuery:[object Object]
+
+		})
+
+
+		// jQuery加载写法2：
+		$(function(){
+
+			var $div = $('#box');
+			alert('jQuery2:' + $div);  // jQuery:[object Object]
+		})
+
+
+
+
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>
