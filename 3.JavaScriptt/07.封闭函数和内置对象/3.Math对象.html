@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math对象</title>
+	<script type="text/javascript">
+		
+		// 圆周率
+		var iPI = Math.PI;  // 3.141592653589793
+		//alert(iPI);
+
+		// 0~1(不包括1)的随机数
+		var fRandom = Math.random();
+		// alert(fRandom);  // 0.6288539207190416
+
+
+		// 向下取整
+		//alert(Math.floor(5.6));  // 5
+
+
+		// 向上取整
+		//alert(Math.ceil(5.2));  // 6
+
+
+		// 生成10~20的随机数
+		var iNum1 = 10;
+		var iNum2 = 20;
+
+		var aRandom = [];
+
+		for (var i = 0; i < 30; i++) {
+			
+			// 因为不包括20，最多只能取到19，所以+1向下取整就能确保能取到20
+			var fNum = Math.floor((iNum2-iNum1+1)*Math.random())+10;
+
+			aRandom.push(fNum);
+		}
+
+		console.log(aRandom);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
