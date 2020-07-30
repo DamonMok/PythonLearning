@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常用内置对象</title>
+	<script type="text/javascript">
+	
+	window.onload = function(){
+
+		// 2.location
+		// 2.1 window.location.href = "#"; 获取或者重定url地址
+
+		var sBackUrl = document.referrer;  // 获取从上一个跳转过来的页面url
+
+		var oBtn = document.getElementById('link');
+
+		oBtn.onclick = function(){
+
+			// 通常用来处理：登录完，跳转到之前正在浏览的页面
+			window.location.href = sBackUrl;  // 重定
+		}
+
+
+		// 2.2 window.location.search // 获取地址?开头的参数部分
+		var sParameter = window.location.search;
+		alert(sParameter);  // ?abc=123
+
+
+		// 2.3 window.location.hash // 获取页面锚点或者叫哈希值,可以获取地址中#开头的参数
+		var sHash = window.location.hash;
+		alert(sHash);  // #456
+	}
+
+	</script>
+
+</head>
+<body>
+	<!-- 
+		1. document
+			1.1 document.getElementById('id'); // 通过id获取元素；
+			1.2 document.getElementsByTagName('div');   /通过标签名获取对象;
+			1.3 document.referrer(); // 获取上一个跳转页面的地址(需要服务器环境)，例如在百度跳到糯米，在糯米检查-console-document.referrer可以看到百度的网址
+	 -->
+
+	<input type="button" value="跳转" id="link">
+
+</body>
+</html>
