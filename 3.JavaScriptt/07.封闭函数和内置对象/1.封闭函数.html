@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封闭函数</title>
+	<script type="text/javascript">
+
+		// 此处有同名函数、变量
+		var iSameAsOuter = 23;
+
+		function fnSameAsOuter(){
+
+			alert('外部同名函数不受影响，返回：' + iSameAsOuter);
+
+		}
+
+
+		// 封闭函数不会影响到函数外部或文件外部(js)的变量、函数，即使函数、变量有重名
+		// 封闭函数一开始就会自动调用，不用命名
+		
+		// 第一种写法
+		(function(){
+
+			var iSameAsOuter = 20;
+
+			function fnSameAsOuter(){
+
+				alert('封闭函数1返回：' + iSameAsOuter);
+			}
+
+			fnSameAsOuter();  // 20
+
+		})();
+
+		// 第二种写法
+		!function(){
+
+			var iSameAsOuter = 21;
+
+			function fnSameAsOuter(){
+
+				alert('封闭函数2返回：' + iSameAsOuter);
+			}
+
+			fnSameAsOuter();  // 20
+		}();
+
+		// 第三种写法
+		~function(){
+
+			var iSameAsOuter = 22;
+
+			function fnSameAsOuter(){
+
+				alert('封闭函数3返回：' + iSameAsOuter);
+			}
+
+			fnSameAsOuter();  // 22
+		}();
+
+
+		fnSameAsOuter();  // 23
+
+
+
+	</script>
+
+
+
+</head>
+<body>
+	
+</body>
+</html>
