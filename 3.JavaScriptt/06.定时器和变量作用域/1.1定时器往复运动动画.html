@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器往复运动动画</title>
+	<script type="text/javascript">
+
+		window.onload = function(){
+
+			var oDiv = document.getElementById('box');
+
+			var iLeft = 0;
+			var iSpeed = 10;  // 控制运动方向
+
+			var timer = setInterval(function(){
+
+				iLeft += iSpeed
+
+				if (iLeft > 700 || iLeft < 0) {
+
+					iSpeed = -iSpeed;  // 通过控制数值正负，改变运动方向
+				}
+
+				oDiv.style.left = iLeft + 'px';
+
+			}, 30);
+
+		}
+
+
+	</script>
+
+	<style>
+		#box{
+			position: absolute;
+			left: 0px;
+			top: 50px;
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div id="box" ></div>
+</body>
+</html>
