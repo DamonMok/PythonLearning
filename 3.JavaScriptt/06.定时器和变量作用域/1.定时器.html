@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<script type="text/javascript">
+		
+		function sayHi(){
+
+			alert('hi');
+		}
+
+		// 1.只执行一次的定时器
+		//var time1 = setTimeout(sayHi, 2000);  // 每2000毫秒(2s)执行一次
+
+		// clearTimeout(time1);  // 关闭定时器
+
+		// 2.重复执行的定时器
+		var time2 = setInterval(sayHi, 2000);
+		//clearInterval(time2);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
