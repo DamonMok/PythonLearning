@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery选择器</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		// 1.jquery选择器，选择规则和css样式相同，可以通过length属性判断是否选择成功
+
+		$('#myId');  // 选择id为myId的元素
+
+		$('.myClass');  // 选择class样式为myclass的元素
+
+		$('li');  // 选择所有li元素
+
+		$('#ul1 li span');  // 选择id为ul1元素下所有li下的span元素
+
+		$('input[name=myName]');  // 选择name属性等于myName的input元素
+
+
+		// 2.对选择集进行过滤
+		$('div').has('p');  // 选择包含p元素的div元素
+
+
+		$('div').not('.myClass');  // 选择class不等于myClass的div元素
+
+		$('div').filter('.myClass');  // 选择class等于myClass的div元素
+
+		$('div').eq(5);  // 选择第6个div元素
+
+
+		// 3.
+
+
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>
