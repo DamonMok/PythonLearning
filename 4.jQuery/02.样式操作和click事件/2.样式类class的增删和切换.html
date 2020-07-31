@@ -3,6 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>样式类class的增删和切换</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			$('.btn').click(function(){
+
+				$('.box').toggleClass('toggle');  // 有toggle这个样式就删除，没有就添加
+			})
+
+		})
+
+
+	</script>
+	<style type="text/css">
+
+		.btn{
+			display: block;
+			margin:20px auto;
+		}
+		
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin: 50px auto;
+		}
+
+		.toggle{
+			background-color: blue;
+		}
+
+	</style>
+
 </head>
 <body>
 	<!-- 
@@ -18,5 +52,9 @@
 		4.  $('div1').toggleClass('divClass');  //重复切换toggleClass样式
 
 	 -->
+	<input type="button" value="切换样式" class="btn">
+
+	<div class="box"></div>
+
 </body>
 </html>
