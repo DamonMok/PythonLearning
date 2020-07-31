@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>操作行间样式</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			// 1. 获取行间样式
+			// 原生js不能获取没有设置过的行间样式(默认值)，jquery可以
+			// 如果是从选择集中获取样式，则获取到的时第一个元素的样式
+			var $aLink = $('.link');
+
+			var sFontSize = $aLink.css('fontSize');
+
+			alert(sFontSize);  // 16px
+
+
+			// 2. 设置行间样式
+			$aLink.css({'fontSize': '14px', 'color': 'red'});
+
+		})
+
+	</script>
+</head>
+<body>
+
+	<a href="http://www.baidu.com" class="link">去百度</a>
+
+</body>
+</html>
