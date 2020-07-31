@@ -22,7 +22,6 @@
 		// 2.对选择集进行过滤
 		$('div').has('p');  // 选择包含p元素的div元素
 
-
 		$('div').not('.myClass');  // 选择class不等于myClass的div元素
 
 		$('div').filter('.myClass');  // 选择class等于myClass的div元素
@@ -30,7 +29,23 @@
 		$('div').eq(5);  // 选择第6个div元素
 
 
-		// 3.
+		// 3.选择集转移
+		$('div').prev();  // 选择div元素前的第一个同辈元素
+
+		$('div').prevAll();  // 选择div元素前的所有同辈元素
+
+		$('div').next();  // 选择div元素后的第一个同辈元素
+
+		$('div').nextAll();  // 选择div元素后的所有同辈元素
+
+		$('div').parent();  // 选择div元素的父元素
+
+		$('div').children();  // 选择div元素的所有子元素
+		$('div').children('span');  // 选择div元素下的span子元素
+
+		$('div').siblings();  // 选择div元素的所有同辈元素
+
+		$('div').find('.myClass');  // 选择div内的class等于myClass的元素
 
 
 	</script>
