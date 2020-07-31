@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡实例</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $btn = $('.btn_con input');
+			$btn.click(function(){
+
+				// 切换选项卡按钮的选中状态
+				$(this).addClass('active').siblings().removeClass('active');
+
+				// 根据index切换详细页
+				$('.detail_con li').eq($(this).index()).addClass('current').siblings().removeClass('current');
+
+			})
+
+
+		})
+
+
+	</script>
+
+
+	<style type="text/css">
+		
+		.btn_con{
+			font-size: 0px;
+		}
+
+		.btn_con input{
+			width: 80px;
+			height: 20px;
+			border: none;
+			outline: none;
+		}
+
+		.detail_con{
+
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.detail_con li{
+			
+			width: 400px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+			background-color: gold;
+			display: none;
+		}
+
+		.active{
+			background-color: gold;
+
+		}
+
+		.detail_con .current{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="btn_con">
+		<input type="button" value="1" class="active">
+		<input type="button" value="2">
+		<input type="button" value="3">
+	</div>
+
+	<ul class="detail_con">
+		<li class="current">第1个</li>
+		<li>第2个</li>
+		<li>第3个</li>
+	</ul>
+</body>
+</html>
