@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定click事件</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			$('.box').click(function(){
+
+			//this指的是当前点击的原生对象
+			//$(this)指的是当前点击的jquery对象
+			$(this).css({'backgroundColor': 'red'});
+			
+			})
+		})
+
+	</script>
+	<style>
+		
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin: 50px auto;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
