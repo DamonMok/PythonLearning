@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery简单特效</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+
+		$(function(){
+
+			var $btn = $('.btn');
+
+			var $div = $('.box');
+
+			$btn.click(function(){
+
+				// 1.fadeIn()淡入	(需要先设置display=none;)
+				$div.fadeIn(1000, 'swing', function(){
+					// 动画时长：1000毫秒 = 1s
+					// 运动方式
+					// 动画完成后的回调
+					alert('动画完毕');
+				})
+
+
+				// 2.fadeOut()淡出
+
+
+				// 3.fadeToggle()切换淡入淡出
+
+
+				// 4.hide()隐藏
+
+
+				// 5.show()显示	(需要先设置display=none;)
+
+
+				// 6.slideDown()向下展开	(需要先设置display=none;)
+
+
+				// 7.slideUp()向上卷起
+
+
+				// 8.slideToggle()切换展开、卷起
+
+
+			})
+
+		})
+		
+		
+
+
+	</script>
+
+	<style type="text/css">
+		.box{
+			width: 300px;
+			height: 400px;
+			background-color: gold;
+
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="动画" class="btn">
+	<div class="box"></div>
+</body>
+</html>
