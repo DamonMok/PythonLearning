@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate动画</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+			
+		// animate动画表现形式:
+		// $('.box').animate({}, 1000, 'swing', function(){});
+		// 第一个参数：元素属性的变化
+		// 第二个参数：动画持续时间
+		// 第三个参数：动画形式
+		// 第四个动画：动画结束的回调函数
+
+
+		$(function(){
+
+			var $div = $('.box');
+
+			$('.btn').click(function(){
+
+				$div.stop();  // 解决反复点击持续动画bug
+
+				$div.animate({
+
+					// width: '400px',
+					// height: '400px'
+
+					// 可以写表达式
+					width: '+=50px',
+					height: '+=50px'
+
+				}, 1000, 'swing', function(){
+
+					// alert('动画结束');  // 动画回调
+				})
+
+			})
+
+		})
+
+
+	</script>
+
+
+
+	<style type="text/css">
+		
+	.box{
+		width: 200px;
+		height: 200px;
+		background-color: gold;
+	}
+
+
+	</style>
+</head>
+<body>
+	<input type="button" value="动画" class="btn">
+	<div class="box"></div>
+</body>
+</html>
