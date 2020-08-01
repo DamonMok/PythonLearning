@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴图片浏览实例</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $li = $('.accordion li');
+
+
+			$li.click(function(){
+
+				// 1. 当前点击向左
+				$(this).animate({
+					'left': $(this).index()*20
+				})
+
+				// 2. 位于当前点击图片左边的所有图片，往左运动
+				$(this).prevAll().each(function(){
+
+					$(this).animate({
+						'left': $(this).index()*20
+					})
+				})
+
+				// 3. 位于当前点击图片右边的所有图片，往右运动
+				$(this).nextAll().each(function(){
+
+					$(this).animate({
+						'left': 622+$(this).index()*20
+					})
+				})
+
+
+			})
+
+		})
+
+
+
+	</script>
+
+
+	<style type="text/css">
+
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.accordion_con{
+			width: 722px;
+			height: 350px;
+			margin: 50px auto;
+			overflow: hidden;
+		}
+
+		.accordion{
+			position: relative;
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			width: 642px;
+			height: 100%;
+		}
+
+		.accordion li{
+			position: absolute;
+			width: 642px;
+			top: 0px;
+		}
+
+		.accordion li span{
+			float: left;
+			width: 20px;
+			height: 350px;
+			font: normal 12px/12px 'Microsoft Yahei';
+			color: lightgray;
+			text-align: center;
+			padding-top: 10px;
+			cursor: pointer;
+			box-sizing: border-box;
+		}
+
+		.accordion li img{
+			float: right;
+		}
+
+		.accordion li:nth-child(1){
+			background-color: red;
+			left: 0px;
+		}
+
+		.accordion li:nth-child(2){
+			background-color: blue;
+			left: 642px;
+		}
+
+		.accordion li:nth-child(3){
+			background-color: gold;
+			left: 662px;
+		}
+
+		.accordion li:nth-child(4){
+			background-color: green;
+			left: 682px;
+		}
+
+		.accordion li:nth-child(5){
+			background-color: pink;
+			left: 702px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="accordion_con">
+		<ul class="accordion">
+			<li><span>非洲景色01</span><img src="images/001.jpg" alt=""></li>
+			<li><span>非洲景色02</span><img src="images/002.jpg" alt=""></li>
+			<li><span>非洲景色03</span><img src="images/003.jpg" alt=""></li>
+			<li><span>非洲景色04</span><img src="images/004.jpg" alt=""></li>
+			<li><span>非洲景色05</span><img src="images/005.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
