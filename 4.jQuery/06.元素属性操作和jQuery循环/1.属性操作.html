@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性操作</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $link = $('.link');
+
+			var $image = $('.image');
+
+			var $div = $('.empty');
+
+			// 1.读取属性
+			var sProp = $link.prop('class');
+			console.log(sProp);
+
+			// 获取图片地址时，返回的是绝对路径
+			// file:///Users/damonmok/Desktop/PythonLearning/PythonLearning/4.jQuery/06.%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C%E5%92%8CjQuery%E5%BE%AA%E7%8E%AF/images/cat.jpeg
+			// 需要切割路径才能使用
+			console.log($image.prop('src'));
+
+
+			// 2.设置属性
+			$link.prop({'href': 'http://www.baidu.com'});
+
+
+			// 3.读取内容
+			var $innerHTML = $link.html();
+			console.log($innerHTML);
+
+
+			// 4.设置内容
+			$link.html('去谷歌吧!');  // 插入内容
+
+			$div.html('<a href="#">新的标签</a>')  // 插入元素
+		})
+
+	</script>
+
+</head>
+<body>
+	<a href="#" class="link">去百度</a>
+	<img src="images/cat.jpeg" alt="" class="image">
+	<div class="empty"></div>
+</body>
+</html>
