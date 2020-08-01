@@ -8,21 +8,27 @@
 
 		$(function(){
 
+			// 菜单对象
+			var $menu = $('.menu');
+
+			// 菜单占位对象，防止菜单消失脱离文档流时，下面的元素跳到上方
+			var $menu_placeholder = $('.menu_placeholder');
+
+			// 滚动的距离
+			var iScrollTop = 0;
+
+			// 向上按钮对象
+			var $toTop = $('.toTop');
+
 			$(window).scroll(function(){
-
-				// 菜单对象
-				var $menu = $('.menu');
-
-				// 菜单占位对象，防止菜单消失脱离文档流时，下面的元素跳到上方
-				var $menu_placeholder = $('.menu_placeholder');
-
-				// 滚动的距离
-				var iScrollTop = $(document).scrollTop();
+				
+				iScrollTop = $(document).scrollTop();
 				// document.title = iScrollTop;
 
 				if (iScrollTop > 150) {
 
 					$menu_placeholder.show();  // 提前占位，解决脱离文档流导致元素上移bug
+					$toTop.fadeIn();
 
 					$menu.css({
 						'position': 'fixed',
@@ -30,24 +36,30 @@
 						'top': 0,
 						'marginLeft': -480,
 					});
-
-			
-
-
 				}else {
 
 					$menu_placeholder.hide();  // 取消占位
+					$toTop.fadeOut();
 
 					$menu.css({
 						'position': 'static',
 						'marginLeft': 'auto'
 					});
-
-					
 				}
 
 			})
 
+			// 滚动到顶部
+			$toTop.click(function(){
+
+				// 无动画
+				// $(document).scrollTop(0);
+
+				// 有动画
+				$('html, body').animate({
+					'scrollTop': 0
+				})
+			})
 
 		})
 		
@@ -79,6 +91,15 @@
 			display: none;
 		}
 
+		.toTop{
+			position: fixed;
+			right: 60px;
+			bottom: 60px;
+			font-size: 30px;
+			cursor: pointer;
+			display: none;
+		}
+
 		.detail{
 			text-align: center;
 		}
@@ -90,6 +111,7 @@
 	<div class="banner"></div>
 	<div class="menu"></div>
 	<div class="menu_placeholder"></div>
+	<div class="toTop">⏫</div>
 	<div class="detail">
 		<p>页面内容</p>
 	<br />
