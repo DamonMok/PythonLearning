@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加入购物车动画</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $point = $('.point');  // 红点
+
+			var $add = $('.add');  // 添加按钮
+
+			var $cart = $('.cart');  // 购物车
+
+			var $count = $('.cart span');  // 购物车数量
+
+			$add.click(function(){
+
+				$point.css({
+
+					// 把红点位置设置到按钮中央
+					'left': $('.add').offset().left + $(this).outerWidth()/2 - ($point.outerWidth()/2),
+					'top': $('.add').offset().top + $(this).outerHeight()/2 - ($point.outerHeight()/2)
+				})
+
+				$point.show();
+
+				$point.animate({
+
+					// 把红点通过动画移动到购物车
+					'left': $('.cart').offset().left + $cart.outerWidth()/2 - $point.outerWidth()/2,
+					'top': $('.cart').offset().top  + $cart.outerHeight()/2 - $point.outerHeight()/2,
+				}, function(){
+
+					$(this).hide();
+
+					var iNewCount = parseInt($count.html());
+					$count.html(iNewCount+1);
+				})
+			})
+
+		})
+
+
+	</script>
+
+
+
+
+	<style type="text/css">
+		
+		.add{
+			position: absolute;
+			left: 400px;
+			top: 400px;
+		}
+
+		.cart{
+			float: right;
+			margin-right: 20px;
+			background-color: gold;
+		}
+
+		.point{
+			position: absolute;
+			display: none;
+			left: 0px;
+			top: 0px;
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			border-radius: 10px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<input type="button" class="add" value="加入购物车">
+	<div class="cart">购物车:<span>0</span></div>
+	<div class="point"></div>
+</body>
+</html>
