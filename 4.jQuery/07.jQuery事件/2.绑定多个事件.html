@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绑定多个事件</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $btn = $('.btn');
+
+			// 绑定多个事件
+			$btn.bind('click mouseleave', function(){
+
+				alert('trigger');
+
+				// 解除事件绑定
+				$(this).unbind('mouseleave');
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<input type="button" value="事件" class="btn">
+</body>
+</html>
