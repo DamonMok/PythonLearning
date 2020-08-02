@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDoList</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+			
+		$(function(){
+
+			var $input = $('.input');
+			var $add = $('.add');
+			var $list = $('.list');
+			var $del = $('.del');
+
+			// 增加
+			$add.click(function(){
+
+				var $newLi = $('<li><span class="target">'+$input.val()+'</span><a href="javascript:;" class="del">删除</a><a href="javascript:;" class="down">↓</a><a href="javascript:;" class="up">↑</a></li>')
+
+				$list.append($newLi);
+
+				// 增加完清空input的值
+				$input.val('');
+			})
+
+			// 删除、向下、向上操作
+			$list.delegate('a', 'click', function(){
+
+				var handle = $(this).prop('class');
+
+				if (handle == 'del') {
+					// 删除
+					$(this).parent().remove();
+
+				} else if (handle == 'up') {
+					// 向上
+					if ($(this).parent().prev().length < 1) {
+						alert('到顶了');
+					}
+					$(this).parent().insertBefore($(this).parent().prev())
+
+				} else if (handle == 'down') {
+					// 向下
+					if ($(this).parent().next().length < 1) {
+						alert('到底了');
+					}
+					$(this).parent().insertAfter($(this).parent().next())
+				}
+			})
+
+		})
+
+
+	</script>
+
+
+	<style type="text/css">
+		
+		.con{
+			width: 600px;
+			margin: 50px auto;
+		}
+
+		.title{
+			margin: 0px
+		}
+
+		.input_con{
+			overflow: hidden;
+		}
+
+		.input{
+			float: left;
+			width: 90%;
+			height: 30px;
+			font: normal 14px/30px 'Mircosoft Yahei';
+			box-sizing: border-box;
+		}
+
+		.add{
+			float: right;;
+			width: 8%;
+			height: 30px;
+			box-sizing: border-box;
+		}
+
+		.list{
+			list-style: none;
+			width: 100%;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.list li{
+			height: 40px;
+			border-bottom: 1px solid lightgray;
+		}
+
+		.target, .del, .up, .down{
+			font: normal 14px/40px 'Mircosoft Yahei';
+		}
+
+		.del, .up, .down{
+			text-decoration: none;
+			float: right;
+		}
+
+		.fr{
+			float: right;
+		}
+
+		.del, .down, .up{
+			margin-right: 10px;
+		}
+	
+
+	</style>
+</head>
+<body>
+	<div class="con">
+		<h1 class="title">To do list</h1>
+		<div class="input_con">
+			<input type="text" class="input">
+			<input type="button" value="增加" class="add">
+		</div>
+
+		<ul class="list">
+			<li>
+				<span class="target">学习Python</span>
+				<a href="javascript:;" class="del">删除</a>
+				<a href="javascript:;" class="down">↓</a>
+				<a href="javascript:;" class="up">↑</a></li>
+			<li>
+				<span class="target">学习CSS</span>
+				<a href="javascript:;" class="del">删除</a>
+				<a href="javascript:;" class="down">↓</a>
+				<a href="javascript:;" class="up">↑</a>
+			</li>
+			<li>
+				<span class="target">学习html</span>
+				<a href="javascript:;" class="del">删除</a>
+				<a href="javascript:;" class="down">↓</a>
+				<a href="javascript:;" class="up">↑</a>
+			</li>
+			<li>
+				<span class="target">学习jquery</span>
+				<a href="javascript:;" class="del">删除</a>
+				<a href="javascript:;" class="down">↓</a>
+				<a href="javascript:;" class="up">↑</a>
+			</li>
+			<li>
+				<span class="target">学习MySQL</span>
+				<a href="javascript:;" class="del">删除</a>
+				<a href="javascript:;" class="down">↓</a>
+				<a href="javascript:;" class="up">↑</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
