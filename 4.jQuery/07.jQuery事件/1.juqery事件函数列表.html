@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>juqery事件函数列表</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			var $input = $('.input');
+
+			$input.blur(function(){
+				alert('失去焦点');
+			})
+
+			$input.focus(function(){
+				// 获得焦点一般不需要函数回调
+				return;
+			})
+
+			$input.mouseenter(function(){
+				// alert('鼠标进入');
+			})
+
+			$(window).resize(function(){
+				// 浏览器窗口的大小发生变化
+				// document.title = $(window).width();
+			})
+
+			$(window).scroll(function(){
+				// 滚动条的位置发生变化
+				document.title = $(document).scrollTop();
+			})
+
+			$(window).submit(function(){
+				// 浏览器窗口的大小发生变化
+				alert('提交');
+			})
+		})
+
+
+	</script>
+</head>
+<body>
+	<!-- 
+		1.blur()  元素失去焦点
+		2.focus()  元素获得焦点
+		3.click()  鼠标点击
+		4.mouseover()  鼠标进入(子元素也触发)
+		5.mouseout()  鼠标离开(子元素也触发)
+		6.mouseenter()  鼠标进入
+		7.mouseleave()  鼠标离开
+		8.hover()  同时为mouseenter和mouseleave事件指定处理函数
+		9.ready()  DOM加载完成
+		10.resize()  浏览器窗口的大小发生变化
+		11.scroll()  滚动条的位置发生变化
+		12.submit()  用户提交表单
+
+
+	 -->
+</body>
+
+	<form action="http://www.baidu.com">
+		<input type="text" name="msg" class="input">  
+		<input type="submit">
+	</form>
+	
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p>1</p>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<br />
+	<br />
+
+</html>
