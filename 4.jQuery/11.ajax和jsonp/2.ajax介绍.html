@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax介绍</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		// 需要服务器环境
+		$.ajax({
+
+			url: 'data.json',
+			type: 'GET',
+			dataType: 'json',
+			data: '',
+			success: function(data){
+
+				alert(data.name);
+			},
+
+			error:function(){
+				alert('服务器超时');
+			}
+
+		});
+
+	</script>
+</head>
+<body>
+	<!-- 
+		1.因为处于安全考虑，js是不允许操作文件的。ajax的出现弥补了这方面的功能，其目的是让js发送http请求，与后台通信，获取数据和信息。
+
+		2.ajax的原理是实例化xmlhttp对象，使用此对象和后台通信。ajax通信过程中不会影响后续的js执行，从而实现了异步。
+
+		3.局部刷新或无刷新：整个页面不刷新，只有局部去刷新，ajax可以自己发送http请求，不用通过浏览器地址栏，所以整体不会刷新；
+		  ajax获取到后台的数据，更新页面显示数据的部分，就做到了页面局部刷新。
+
+		4.同源策略：ajax请求的页面或资源只能是同一个域下面的资源，不能是其他域的资源，这是基于安全的考虑。jsonp可以实现跨域。
+
+	 -->
+</body>
+</html>
