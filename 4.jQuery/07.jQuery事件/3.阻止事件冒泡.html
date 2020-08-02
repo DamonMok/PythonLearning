@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阻止事件冒泡</title>
+	<style type="text/css">
+		
+		.grandfather{
+			width: 300px;
+			height: 300px;
+			background-color: gold;
+		}
+
+		.father{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+
+	</style>
+
+	
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $grandfather = $('.grandfather');
+			var $father = $('.father');
+			var $son = $('.son');
+
+			// 事件冒泡：事件会一直往父级对象传递
+			$grandfather.click(function(event){
+				alert('grandfather');  // grandfather
+
+			});
+
+			$father.click(function(event){
+				alert('father');  // father grandfather
+			});
+
+			$son.click(function(event){
+				alert('son');  // son father grandfather
+
+				// 阻止事件冒泡方法1：
+				// event.stopPropagation();
+
+				// 阻止事件冒泡犯法2：(常用)
+				// 还可以用来阻止默认行为，例如表单提交submit()
+				return false;
+			});
+		})
+
+
+	</script>
+
+
+</head>
+<body>
+	<div class="grandfather">1
+		<div class="father">2
+			<div class="son">3</div>
+		</div>
+	</div>
+</body>
+</html>
