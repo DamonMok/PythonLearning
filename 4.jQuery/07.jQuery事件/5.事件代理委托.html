@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件代理委托</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+
+			var $list = $('.list');
+
+			// 给$list选择集对象添加代理
+			$list.delegate('li', 'click', function(){
+
+				// $(this)指的是被代理的对象li
+				$(this).css({'backgroundColor': 'red'});
+			});
+		})
+
+
+	</script>
+
+	<style type="text/css">
+		
+		li{
+			width: 400px;
+			height: 30px;
+			margin-top: 10px;
+			background-color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 
+		事件代理：
+			利用事件冒泡的原理，把事件加到父级上，通过判断事件来源的子集，执行响应的操作。
+			好处：
+			1.事件代理可以极大减少事件绑定的次数，提高性能；
+			2.可以让动态新加进来的子元素也可以拥有相同的操作。
+	 -->
+	 <ul class="list">
+	 	<li>1</li>
+	 	<li>2</li>
+	 	<li>3</li>
+	 	<li>4</li>
+	 	<li>5</li>
+	 	<li>6</li>
+	 	<li>7</li>
+	 	<li>8</li>
+	 </ul>
+</body>
+</html>
